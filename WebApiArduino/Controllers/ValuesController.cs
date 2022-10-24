@@ -31,7 +31,7 @@ namespace WebApiArduino.Controllers
         {
             if (Arduino.IsOpen)
             {
-Arduino.Write("E");
+                Arduino.Write("E");
             }
             else
             {
@@ -39,24 +39,7 @@ Arduino.Write("E");
                 Arduino.Write("E");
             }
             Arduino.Close();
-            
-            
-            return "value";
-        }
-
-        // POST api/values
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/values/5
-        public void Delete(int id)
-        {
+            return "true";
         }
     }
 }
